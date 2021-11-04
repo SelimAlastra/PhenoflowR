@@ -1,0 +1,14 @@
+{
+  "name": "phenoflowr",
+  "version": "1.0.0",
+  "description": "Phenoflow website for researchers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Selim Alastra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
