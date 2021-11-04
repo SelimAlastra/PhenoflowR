@@ -2,6 +2,6 @@ extends layout
 
 block content
     h1 #{title}
-    ul
+    ul.list-group
         each user, i in users
-            li= user.username
+            li.list-group-item= user.username

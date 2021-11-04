@@ -42,14 +42,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Home route
 app.get('/', function (req,res) {
         res.render('index.pug', {
-            title: 'The PhenoflowR home page'
+            title: 'Phenoflow'
      }); 
 });
 
 //Prototype route
 app.get('/prototype', function(req,res) {
     res.render('prototype.pug', {
-        title: 'The PhenoflowR prototype'
+        title: 'Phenoflow prototype'
     }); 
 })
 
@@ -71,7 +71,7 @@ app.get('/users', function (req,res) {
 //Register route
 app.get('/register', function(req,res) {
     res.render('register.pug', {
-        title: 'Register on PhenoflowR'
+        title: 'Register on Phenoflow'
     }); 
 })
 
