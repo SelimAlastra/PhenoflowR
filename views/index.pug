@@ -1,7 +1,25 @@
 extends layout
 
 block content
-    h1 #{title}
+    .container.pageContainer
+        h2.pageTitle Why does phenotype portability matter?
+        br 
+        hr
+        h2.pageSubtitle Re-use
+        p Re-defining phenotypes at new sites may lead to inconsistent definitions. Instead, we want to be able to port definitions between sites, as facilitated by Phenoflow. This is not to say a single gold standard algorithm is required for each disease, but instead different algorithms should be semantically interoperable. The level of abstraction provided by Phenoflow also ensures this.
+        br
+        h2.pageSubtitle Reproducibility
+        p With the extraction of phenotype cohorts now forming a key part of many research methodologies, the mechanism used to derive a cohort within a given study needs to be reusable in order to ensure reproducibility and thus incremental research. The reusable definitions hosted within Phenoflow enable this research.
+        br
+        h2.pageSubtitle Validation
+        p Trust in a phenotype definition is increased by validating it against multiple data sources, such as EHR repositories. By integrating with multiple data source formats, such as i2b2 and OMOP, Phenoflow enables this validation to take place.
+        br
+        hr
+        h2.pageSubtitle Want to learn more ?
+        br
+        p Articles related to Phenoflow : 
+        a(href = "https://www.medrxiv.org/content/10.1101/2020.07.01.20144196v2") Phenoflow: A Microservice Architecture for Portable Workflow-based Phenotype Definitions (2021)
+        p Martin Chapman, Luke V Rasmussen, Jennifer A Pacheco, Vasa Curcin
 
-
+        
 

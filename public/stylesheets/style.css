@@ -1,39 +1,69 @@
 .navbar-light .navbar-brand {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: bolder;
     font-size: 38px;
-    -webkit-text-fill-color: rgb(31, 179, 51);
-    -webkit-text-stroke-color: rgba(22, 58, 13, 0.397);
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: #34BE82;
     -webkit-text-stroke-width: 1.20px; 
     margin-left: 15px;
 }
 
 .navbar-light .navbar-brand:hover {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: bolder;
     font-size: 38px;
-    -webkit-text-fill-color: rgba(31, 179, 51, 0.616);
-    -webkit-text-stroke-color: rgba(31, 179, 51, 0.616);
-    -webkit-text-stroke-width: 0px; 
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: #34BE82;
+    -webkit-text-stroke-width: 1.2px; 
     margin-left: 15px;
 }
 
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Poppins', sans-serif;
     font-weight: 1000;
-    color: whitesmoke;
-    margin: 15px;
+    color: white;
+    margin-left: 15px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
     font-family: 'Poppins', sans-serif;
     font-weight: 1000;
-    color: grey;
-    margin: 15px;
+    color: rgba(245, 245, 245, 0.918);
+    margin-left: 15px;
 }
 
-
-
 .navbar {
-    background-color: #231F20;
+    background-color: #34BE82;
+}
+
+.pageTitle {
+    text-align: center;
+    padding-top: 10px;
+    margin: 25px;
+    color: #34BE82;
+}
+
+.bodyLayout { 
+    background-color: whitesmoke;
+    padding-top: 100px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.dateForm {
+    margin: 2px;
+    margin-left: 10px
+}
+
+.codesInput {
+    margin: 2px;
+    margin-left: 10px
+}
+
+.PValidationText{
+    color : red;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

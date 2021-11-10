@@ -41,9 +41,7 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')));
 //Home route
 app.get('/', function (req,res) {
-        res.render('index.pug', {
-            title: 'Phenoflow'
-     }); 
+        res.render('index.pug'); 
 });
 
 //Prototype route
