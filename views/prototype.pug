@@ -9,7 +9,7 @@ block content
             br
             p Rosacea possible codes : "F4C3100","M153000","M153100","M153200","M153300","M153400","M153.00","M153z00","Myu6900", "L71.1","L71.8","L71.9"
             - let patient1 = {birthDate : new Date(), codes : new String(), lastE : new Date()}
-            form#frm(action='/action_page.php')
+            form#frm
                 #form-group
                     label(for='birthDate') Birthday :
                         input#birthday.dateForm(type='date' name='birthDate')
@@ -28,6 +28,65 @@ block content
             p#validation.PValidationText
             p#primaryText
             p#secondaryText
+
+            br
+            h5 Code list dictionary
+            table.table.table-sm
+                thead
+                    tr
+                    th(scope='col') #
+                    th(scope='col') Code string
+                    th(scope='col') Code meaning
+                tbody
+                    tr
+                        th(scope='row') 1
+                        td F4C3100
+                        td Rosacea conjunctivitis
+                    tr
+                        th(scope='row') 2
+                        td M153000
+                        td Acne rosacea
+                    tr
+                        th(scope='row') 3
+                        td M153100
+                        td Rhinophyma
+                    tr
+                        th(scope='row') 4
+                        td M153200
+                        td Rosacea hypertrophica
+                    tr
+                        th(scope='row') 5
+                        td M153300
+                        td Lupoid rosacea
+                    tr
+                        th(scope='row') 6
+                        td M153400
+                        td Ocular rosacea
+
+                    tr
+                        th(scope='row') 7
+                        td M153.00
+                        td Rosacea
+                    tr
+                        th(scope='row') 8
+                        td M153z00
+                        td Rosacea NOS
+                    tr
+                        th(scope='row') 9
+                        td Myu6900
+                        td Other rosacea
+                    tr
+                        th(scope='row') 10
+                        td L71.1
+                        td Rhinophyma
+                    tr
+                        th(scope='row') 11
+                        td L71.8
+                        td Other rosacea
+                    tr
+                        th(scope='row') 12
+                        td L71.9
+                        td Rosacea, unspecified
 
             script.
                 function myFunction() {
