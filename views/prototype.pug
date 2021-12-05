@@ -4,39 +4,40 @@ block content
     .container
         h2.pageTitle Phenoflow prototype
         .container
+            br
+            hr
             h3 Rosacea example
             hr
             br
-            p Rosacea possible codes : "F4C3100","M153000","M153100","M153200","M153300","M153400","M153.00","M153z00","Myu6900", "L71.1","L71.8","L71.9"
             - let patient1 = {birthDate : new Date(), codes : new String(), lastE : new Date()}
             form#frm
                 #form-group
-                    label(for='birthDate') Birthday :
-                        input#birthday.dateForm(type='date' name='birthDate')
+                    label Birthday :
+                        input#birthDate.dateForm(type='date' name='birthDate')
                 br
                 #form-group
-                    label(for='lastE') Last encounter :
+                    label Last encounter :
                         input#lastE.dateForm(type='date' name='lastE') 
                 br 
                 #form-group
                     label Codes : 
-                        input#codes.codesInput(name='codes', type='text') 
+                        input#codes.codesInput(type='text' name='codes') 
                     p Please separate each code with a comma ","
             br
-            button(onclick='myFunction()').btn.btn-outline-success(type='button') Try it !
+            button(onclick='rosaceaOutput()').btn.btn-outline-success(type='button') Try it !
 
             p#validation.PValidationText
             p#primaryText
             p#secondaryText
 
             br
-            h5 Code list dictionary
+            h5 Rosacea codes dictionary
             table.table.table-sm
                 thead
                     tr
                     th(scope='col') #
-                    th(scope='col') Code string
-                    th(scope='col') Code meaning
+                    th(scope='col') Code 
+                    th(scope='col') Meaning
                 tbody
                     tr
                         th(scope='row') 1
@@ -87,12 +88,129 @@ block content
                         th(scope='row') 12
                         td L71.9
                         td Rosacea, unspecified
+        
+            br
+            hr
+            h3 Abdominal-aortic-aneurysm example
+            hr
+            br
+        
+            - let patient2 = {birthDate2 : new Date(), codes2 : new String(), lastE2 : new Date()}
+            form#frm
+                #form-group
+                    label Birthday :
+                        input#birthDate2.dateForm(type='date', name='birthDate2')
+                br
+                #form-group
+                    label Last encounter :
+                        input#lastE2.dateForm(type='date', name='lastE2') 
+                br 
+                #form-group
+                    label Codes : 
+                        input#codes2.codesInput(type='text' name ='codes2') 
+                    p Please separate each code with a comma ","
+            br
+            button(onclick='AAAOutput()').btn.btn-outline-success(type='button') Try it !
+
+            p#validation2.PValidationText
+            p#aText
+            p#bText
+            p#cText 
+            p#dText
+            p#eText
+            p#fText
+            p#ageExclusion
+            p#lastEncounterExclusion
+
+            br
+            h5 Abdominal-aortic-aneurysm dictionary
+
+            table.table.table-sm
+                    thead
+                        tr
+                        th(scope='col') #
+                        th(scope='col') Code 
+                        th(scope='col') Meaning
+                    tbody
+                        tr
+                            th(scope='row') 1
+                            td 34800
+                            td Endovascular repair of infrarenal abdominal aortic aneurysm or dissection; using aorto‐ aortic tube prosthesis
+                        tr
+                            th(scope='row') 2
+                            td 34802
+                            td Endovascular repair of infrarenal abdominal aortic aneurysm or dissection; using modular bifurcated prosthesis (1 docking limb)
+                        tr
+                            th(scope='row') 3
+                            td 34803
+                            td Endovascular repair of infrarenal abdominal aortic aneurysm or dissection; using modular bifurcated prosthesis (2 docking limbs)
+                        tr
+                            th(scope='row') 4
+                            td 34804
+                            td Endovascular repair of infrarenal abdominal aortic aneurysm or dissection; using unibody bifurcated prosthesis
+                        tr
+                            th(scope='row') 5
+                            td 34805
+                            td Endovascular repair of infrarenal abdominal aortic aneurysm or dissection; using aorto‐ uniiliac or aorto‐unifemoral prosthesis
+                        tr
+                            th(scope='row') 6
+                            td 34830
+                            td Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; tube prosthesis
+                        tr
+                            th(scope='row') 7
+                            td 34831
+                            td Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto‐bi‐iliac prosthesis
+                        tr
+                            th(scope='row') 8
+                            td 34832
+                            td Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto‐bifemoral prosthesis
+                        tr
+                            th(scope='row') 9
+                            td 35081
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for aneurysm, pseudoaneurysm, and associated occlusive disease, abdominal aorta
+                        tr
+                            th(scope='row') 10
+                            td 35082
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for ruptured aneurysm, abdominal aorta
+                        tr
+                            th(scope='row') 11
+                            td 35091
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for aneurysm, pseudoaneurysm, and associated occlusive disease, abdominal aorta involving visceral vessels (mesenteric, celiac, renal)
+                        tr
+                            th(scope='row') 12
+                            td 35092
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for ruptured aneurysm, abdominal aorta involving visceral vessels (mesenteric, celiac, renal)
+                        tr
+                            th(scope='row') 13
+                            td 35102
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for aneurysm, pseudoaneurysm, and associated occlusive disease, abdominal aorta involving iliac vessels (common, hypogastric, external)
+                        tr
+                            th(scope='row') 14
+                            td 35103
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for ruptured aneurysm, abdominal aorta involving iliac vessels (common, hypogastric, external)
+                        tr
+                            th(scope='row') 15
+                            td 35131
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for aneurysm, pseudoaneurysm, and associated occlusive disease, iliac artery (common, hypogastric, external)
+                        tr
+                            th(scope='row') 16
+                            td 35132
+                            td Direct repair of aneurysm, pseudoaneurysm, or excision (partial or total) and graft insertion, with or without patch graft; for ruptured aneurysm, iliac artery (common, hypogastric, external)
+                        tr
+                            th(scope='row') 17
+                            td 441.3
+                            td Abdominal aortic aneurysm, ruptured
+                        tr
+                            th(scope='row') 18
+                            td 441.4
+                            td Abdominal aortic aneurysm, without mention of rupture
 
             script.
-                function myFunction() {
+            
+                function rosaceaOutput() {
                     const primaryCodes = ["F4C3100","M153000","M153100","M153200","M153300","M153400","M153.00","M153z00","Myu6900"];
                     const secondaryCodes = ["L71.1","L71.8","L71.9"];
-                    const birthday = document.getElementById("birthday").value;
+                    const birthDate = document.getElementById("birthDate").value;
                     const lastE = document.getElementById("lastE").value;
                     const codes = document.getElementById("codes").value;
                     let i;
@@ -107,7 +225,7 @@ block content
                     document.getElementById("primaryText").innerHTML = "";
                     document.getElementById("secondaryText").innerHTML = "";
                     
-                    if (birthday.length == 0) {
+                    if (birthDate.length == 0) {
                         validationText += " |BIRTHDATE| ";
                         validationBoolean = true;
                     }
@@ -121,7 +239,7 @@ block content
                     }
 
                     if (validationBoolean == true) {
-                        validationText += " is/are missing !"
+                        validationText += " missing !"
                         document.getElementById("validation").innerHTML = validationText;
 
                     }
@@ -156,7 +274,162 @@ block content
                         document.getElementById("secondaryText").innerHTML = secondaryText;
                        
                     }
-                    return codes
+                    
                 }
+
+
+            script.
+            
+                function AAAOutput() {
+
+                    const birthDate2 = new Date(document.getElementById("birthDate2").value);
+                    const lastE2 = new Date(document.getElementById("lastE2").value);
+                    const codes2 = document.getElementById("codes2").value;
+
+                    const aCodes = ["34800","34802","34803","34804","34805","34830","34831","34832","35091","35092"];
+                    const bCodes = ["35081"];
+                    const cCodes = ["441.3"];
+                    const dCodes = ["35102","35103"];
+                    const eCodes = ["35131","35132"];
+                    const fCodes  = ["441.4"];
+
+                    // For lisibility
+                    // a = Renal Abdominal Aortic Aneurysm
+                    // b = Occlusive Abdominal Aortic Aneurysm
+                    // c = Abdominal Aortic Aneurysm Ruptured
+                    // d = External Abdominal Aortic Aneurysm
+                    // e = Abdominal Aortic Aneurysm Artery
+                    // f = Abdominal Aortic Aneurysm Mention Rupture
+
+
+                    var age_diff_ms = Date.now() - birthDate2.getTime();
+                    var age_dt = new Date(age_diff_ms); 
+                    var age = Math.abs(age_dt.getUTCFullYear() - 1970);
+
+                    const maximumAge = 90
+                    const minimumAge = 40
+                    
+                    //Code to calculate age was taken from W3 Ressources
+                    // Link : https://www.w3resource.com/javascript-exercises/javascript-date-exercise-18.php
+
+                    //Use same logic to caculate last encounter time;
+
+                    var lastE_diff_ms = Date.now() - lastE2.getTime();
+                    var lastE_dt = new Date(lastE_diff_ms); 
+                    var lastETime = Math.abs(lastE_dt.getUTCFullYear() - 1970);
+
+                    console.log(birthDate2)
+
+
+                    let i;
+                    let aText = "";
+                    let bText = "";
+                    let cText = "";
+                    let dText = "";
+                    let eText = "";
+                    let fText = "";
+
+                    let validationText = "";
+
+                    document.getElementById("validation2").innerHTML= "";
+                    document.getElementById("aText").innerHTML = "";
+                    document.getElementById("bText").innerHTML = "";
+                    document.getElementById("cText").innerHTML = "";
+                    document.getElementById("dText").innerHTML = "";
+                    document.getElementById("eText").innerHTML = "";
+                    document.getElementById("fText").innerHTML = "";
+                    document.getElementById("ageExclusion").innerHTML = "";
+                    document.getElementById("lastEncounterExclusion").innerHTML = "";
+
+                    let validationBoolean = false;
+
+
+                    if (isNaN(birthDate2.getTime())) {
+                        validationText += " |BIRTHDATE| ";
+                        console.log("true")
+                        validationBoolean = true;
+                    }
+                    if (isNaN(lastE2.getTime())) {
+                        validationText += "|LAST ENCOUNTER|";
+                        validationBoolean = true;
+                    }
+                    if (codes2.length == 0) {
+                        validationText += " |CODES| ";
+                        validationBoolean = true;
+                    }
+
+                    if (validationBoolean == true) {
+                        validationText += " missing !"
+                        document.getElementById("validation2").innerHTML = validationText;
+                    }
+
+                    // For lisibility
+                    // a = Renal Abdominal Aortic Aneurysm
+                    // b = Occlusive Abdominal Aortic Aneurysm
+                    // c = Abdominal Aortic Aneurysm Ruptured
+                    // d = External Abdominal Aortic Aneurysm
+                    // e = Abdominal Aortic Aneurysm Artery
+                    // f = Abdominal Aortic Aneurysm Mention Rupture
+
+
+                    if (validationBoolean == false) {
+                        for (i = 0; i < aCodes.length ;i++) {
+                            if(codes2.includes(aCodes[i])){
+                                document.getElementById("aText").innerHTML = "Renal Abdominal Aortic Aneurysm : CASE";
+                            }
+                            else
+                            {
+                                document.getElementById("aText").innerHTML = "Renal Abdominal Aortic Aneurysm : UNK";
+                            }
+                        }
+
+                        for (i = 0; i < bCodes.length ;i++) {
+                            if(codes2.includes(aCodes[i])){
+                                document.getElementById("bText").innerHTML = "Occlusive Abdominal Aortic Aneurysm : CASE";
+                            }
+                            else
+                            {
+                                document.getElementById("bText").innerHTML = "Occlusive Abdominal Aortic Aneurysm : UNK";
+                            }
+                        }
+                        for (i = 0; i < cCodes.length ;i++) {
+                            if(codes2.includes(cCodes[i])){
+                                document.getElementById("cText").innerHTML = "Abdominal Aortic Aneurysm Ruptured : CASE";
+                            }
+                            else
+                            {
+                                document.getElementById("cText").innerHTML = "Abdominal Aortic Aneurysm Ruptured : UNK";
+                            }
+                        }
+                        for (i = 0; i < dCodes.length ;i++) {
+                            if(codes2.includes(dCodes[i])){
+                                document.getElementById("dText").innerHTML = "External Abdominal Aortic Aneurysm : CASE";
+                            }
+                            else
+                            {
+                                document.getElementById("dText").innerHTML = "External Abdominal Aortic Aneurysm : UNK";
+                            }
+                        }
+                        for (i = 0; i < eCodes.length ;i++) {
+                            if(codes2.includes(eCodes[i])){
+                                document.getElementById("eText").innerHTML = "Abdominal Aortic Aneurysm Artery : CASE";
+                            }
+                            else
+                            {
+                                document.getElementById("eText").innerHTML = "Abdominal Aortic Aneurysm Artery : UNK";
+                            }
+                        }
+                        for (i = 0; i < fCodes.length ;i++) {
+                            if(codes2.includes(fCodes[i])){
+                                document.getElementById("fText").innerHTML = "Abdominal Aortic Aneurysm Mention Rupture : CASE";
+                            }
+                            else
+                            {
+                                document.getElementById("fText").innerHTML = "Abdominal Aortic Aneurysm Mention Rupture : UNK";
+                            }
+                        }
+                    }
+                }
+
 
 
