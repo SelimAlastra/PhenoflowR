@@ -67,3 +67,26 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.form-control{
+    margin : 10px
+}
+
+.contactUsBtnContainer{
+    align-items: center;
+    text-align: center;
+}
+
+.contactUsButton{
+    min-width: 200px;
+    margin: 15px
+}
+
+.contactUsConfirmationMsg{
+    color : #34BE82
+    
+    
+    
+}
+
+

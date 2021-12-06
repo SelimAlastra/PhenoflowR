@@ -3,4 +3,30 @@ extends layout
 block content
     .container 
         h2.pageTitle Contact Us
-        .container
+        container.contactUsContainer
+        br
+        h5 Have a question about the Phenoflow application ? We will try to answer you as soon as possible.
+        hr
+        br
+        h5.contactUsConfirmationMsg #{msg}
+        br
+        form#frm(method = "POST" action = "contactUs")
+                .form-group
+                    label(for='exampleFormControlInput1') Email address
+                    br
+                    input#exampleFormControlInput1.form-control(type='text' placeholder='name@example.com' name = "Email")
+                #form-group
+                    label(for='exampleFormControlInput1') First Name
+                    br
+                    input#exampleFormControlInput1.form-control(type='text' placeholder='John' name = "FirstName")
+                #form-group
+                    label(for='exampleFormControlInput1') Last Name 
+                    br
+                    input#exampleFormControlInput1.form-control(type='text' placeholder='Smith' name = "LastName")
+                .form-group
+                    label(for='exampleFormControlTextarea1') Message
+                    textarea#exampleFormControlTextarea1.form-control(type = 'text' rows='3' placeholder="Insert your message here..." name = "Question")
+                
+                .container.contactUsBtnContainer
+                    button.btn.btn-outline-success.contactUsButton(type='submit') Submit !
+
