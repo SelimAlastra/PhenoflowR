@@ -51,6 +51,16 @@ app.get('/prototype', function(req,res) {
     }); 
 })
 
+//Contact Us route
+app.get('/contactUs', function(req,res) {
+    res.render('contactUs.pug')
+});
+
+//Set Up route
+app.get('/setUp', function(req,res) {
+    res.render('setUp.pug')
+});
+
 //Users route
 app.get('/users', function (req,res) {
     User.find({}, function(err, users){
