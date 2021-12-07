@@ -62,12 +62,6 @@
     margin-left: 10px
 }
 
-.PValidationText{
-    color : red;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .form-control{
     margin : 10px
 }
@@ -84,9 +78,16 @@
 
 .contactUsConfirmationMsg{
     color : #34BE82
-    
-    
-    
+}
+
+.prototypeSubmissionContainer{
+    align-items: center;
+    text-align: center;
+}
+
+.prototypeSubmissionButton{
+    min-width: 200px;
+    margin: 15px
 }
 
 

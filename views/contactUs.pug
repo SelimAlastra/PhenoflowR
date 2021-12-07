@@ -10,23 +10,39 @@ block content
         br
         h5.contactUsConfirmationMsg #{msg}
         br
-        form#frm(method = "POST" action = "contactUs")
-                .form-group
-                    label(for='exampleFormControlInput1') Email address
-                    br
-                    input#exampleFormControlInput1.form-control(type='text' placeholder='name@example.com' name = "Email")
-                #form-group
-                    label(for='exampleFormControlInput1') First Name
-                    br
-                    input#exampleFormControlInput1.form-control(type='text' placeholder='John' name = "FirstName")
-                #form-group
-                    label(for='exampleFormControlInput1') Last Name 
-                    br
-                    input#exampleFormControlInput1.form-control(type='text' placeholder='Smith' name = "LastName")
-                .form-group
-                    label(for='exampleFormControlTextarea1') Message
-                    textarea#exampleFormControlTextarea1.form-control(type = 'text' rows='3' placeholder="Insert your message here..." name = "Question")
-                
-                .container.contactUsBtnContainer
-                    button.btn.btn-outline-success.contactUsButton(type='submit') Submit !
+        form.needs-validation#frm(method = "POST" action = "contactUs" novalidate='')
+            .form-group
+                label(for='formControlInput1') Email address
+                br
+                input#formControlInput1.form-control(type='text' placeholder='name@example.com' name = "Email" required ="")
+                .invalid-feedback
+                    | Please insert an Email.
+                br
+            .form-group
+                label(for='formControlInput2') First Name
+                br
+                input#formControlInput2.form-control(type='text' placeholder='John' name = "FirstName" required ="")
+                .invalid-feedback
+                    | Please insert your first name.
+                br
+            .form-group
+                label(for='formControlInput3') Last Name 
+                br
+                input#formControlInput3.form-control(type='text' placeholder='Smith' name = "LastName" required ="")
+                .invalid-feedback
+                    | Please insert your last name.
+                br
+            .form-group
+                label(for='formControlTextarea1') Message
+                textarea#formControlTextarea1.form-control(type = 'text' rows='3' placeholder="Insert your message here..." name = "Question" required ="")
+                .invalid-feedback
+                    | Please insert a message.
+                br
+            
+            .container.contactUsBtnContainer
+                button.btn.btn-outline-success.contactUsButton(type='submit') Submit !
+        
+
+        script(type='text/javascript', src='/js/formValidation.js')
+
 

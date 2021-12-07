@@ -38,8 +38,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //set public folder
-
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
 //Home route
 app.get('/', function (req,res) {
         res.render('index.pug'); 
@@ -87,6 +90,9 @@ app.post('/contactUs', function(req,res) {
     
     transporter.sendMail(options, function(err,info){
         if(err){
+            res.render('contactUs.pug', {
+                msg: 'Sorry, an error happened !'
+            });
             return console.log(err);
         }
         else{
