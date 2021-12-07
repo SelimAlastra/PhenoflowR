@@ -66,26 +66,16 @@
     margin : 10px
 }
 
-.contactUsBtnContainer{
-    align-items: center;
-    text-align: center;
-}
-
-.contactUsButton{
-    min-width: 200px;
-    margin: 15px
-}
-
 .contactUsConfirmationMsg{
     color : #34BE82
 }
 
-.prototypeSubmissionContainer{
+.formContainer{
     align-items: center;
     text-align: center;
 }
 
-.prototypeSubmissionButton{
+.formBtn{
     min-width: 200px;
     margin: 15px
 }

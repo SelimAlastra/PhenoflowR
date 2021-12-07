@@ -1,12 +1,24 @@
 extends layout
 
 block content
-    h1 #{title}
-    form(method='POST', action ='/register')
-        #form-group
-            label Username: 
-            input.form-control(name='username', type='text')
-        #form-group
-            label Password: 
-            input.form-control(name='password', type='text')
-        input.btn.btn-primary(type='submit', value='Submit')
+    .container
+        h2.pageTitle Register on PhenoflowR
+        .container
+            form.needs-validation#frm(method='POST', action ='/register' novalidate= '')
+                .form-group
+                    label(for='username') Username
+                    input#username.form-control(name='username' type='text' required ="")
+                    .invalid-feedback
+                        | Please insert an username.
+                    br
+                .form-group
+                    label(for='password') Password
+                    input#password.form-control(name='password' type='text' required ="")
+                    .invalid-feedback
+                        | Please insert a password.
+                    br
+                .container.formContainer
+                    button.btn.btn-outline-success.formBtn(type='submit' value ='submit') Register !
+
+
+            script(type='text/javascript', src='/js/formValidation.js')
